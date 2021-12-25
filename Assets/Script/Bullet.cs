@@ -7,18 +7,13 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
     public GameObject impactEffect;
-    void OnTriggerEnter2D(Collider2D other)
+    
+    void Start()
     {
-        switch (other.gameObject.tag)
-        {
-            case "Wall":
-            
-            Destroy(gameObject); // Destroy Bullet
-            Impact();
-            break;
-        }
+        Invoke("OnDestroy",6f);
         
     }
+    
     void OnCollisionEnter2D(Collision2D other)
     {
         switch (other.gameObject.tag)
@@ -26,12 +21,18 @@ public class Bullet : MonoBehaviour
             case "SimpleEnemy":
             Destroy(gameObject); // Destroy Bullet
             break;
-            
+            case "ShipEnemy":
+            Destroy(gameObject);
+            break;
          }
     }
     public void Impact()
     {
         Instantiate(impactEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+    void OnDestroy()
+    {
         Destroy(gameObject);
     }
 }

@@ -4,10 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Wall
   - SimpleEnemy
   - Water
   - FirstBullet
+  - DeadZone
+  - Effect
+  - BulletFromShip
+  - ShipEnemy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - 
   - 
   - post
-  - 
+  - obsta
   - 
   - 
   - 

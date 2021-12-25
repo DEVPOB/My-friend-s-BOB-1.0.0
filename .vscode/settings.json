@@ -54,7 +54,20 @@
         "Temp/":true
     },
     "cSpell.words": [
+        "Behaviour",
+        "Inwater",
+        "inwavecount",
+        "Inzonelosehealth",
+        "inzonetimecount",
+        "inzonetimeout",
+        "iscompiling",
+        "Lerp",
         "Mathf",
-        "Ondead"
+        "nexttimetofire",
+        "Ondead",
+        "Senemy",
+        "turrentscript",
+        "UGUI",
+        "wavecountnum"
     ]
 }

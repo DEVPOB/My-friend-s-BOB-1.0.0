@@ -1,0 +1,29 @@
+private double compilestarttime;
+private bool iscompiling = false;
+if (iscompiling)
+        {
+            if (!EditorApplication.isCompiling)
+            {
+                iscompiling = false;
+                compileFinished();
+
+            }
+
+        }else
+        {
+            if (EditorApplication.isCompiling)
+            {
+                iscompiling = true;
+                compilestarted();
+            }
+        }
+        void compilestarted(){
+            print("compiler started");
+            compilestarttime = EditorApplication.timeSinceStartup;
+        }
+        void compileFinished()
+        {
+            double compileTime = EditorApplication.timeSinceStartup - compilestarttime;
+            print("Compile finished: " + compileTime.ToString("F2") + "s");
+        }
+check compiler time
